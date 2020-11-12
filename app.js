@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 
-app.get('/',(req,res)=> {
-    let nombre = req.query.nombre;
+app.get('/makers/:nombre',(req,res)=> {
+    let nombre = req.params.nombre;
     if (nombre === undefined){
         nombre = 'desconocido'
     }

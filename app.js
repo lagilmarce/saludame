@@ -3,10 +3,11 @@ const app = express()
 
 app.get('/makers/:nombre',(req,res)=> {
     let nombre = req.params.nombre;
+    let capNombre = nombre.charAt(0).toUpperCase() + nombre.slice(1);
     if (nombre === undefined){
         nombre = 'desconocido'
     }
-    res.send(`<h1>Hola ${nombre}!</h1>`)
+    res.send(`<h1>Hola ${capNombre}!</h1>`)
 })
 
 
